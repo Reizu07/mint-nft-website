@@ -3,17 +3,17 @@ import './App.css';
 import MainMint from './MainMint';
 import Navbar from './Navbar';
 
-
 function App() {
-  
+  const [accounts, setAccounts] = useState([]);
+
   return (
-  <div className="Overlay">
-    <div className="App">
-      <Navbar account={accounts} setAccounts={setAccounts}/>
-      <MainMint account={accounts} setAccounts={setAccounts}/>
+    <div className="overlay">
+      <div className="App">
+        <Navbar account={accounts} setAccount={setAccounts} />
+        <MainMint accounts={accounts} setAccounts={setAccounts} />
+      </div>
+      <div className="moving-background"></div>
     </div>
-    <div> className="background-image"</div>
-  </div>
   );
 }
 
